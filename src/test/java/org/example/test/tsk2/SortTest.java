@@ -18,38 +18,13 @@ import static org.example.task.tsk2.Sort.lstSorter;
 
 public class SortTest {
 
-    public static Boolean UpperCaseChecker(String str){
-        return Character.isUpperCase(str.charAt(0));
-    }
-
-    static Boolean arraySortedOrNot(List <String> lst) // Method to check if Array is sorted
-    {
-        List<String>Arraysort = lst.stream().sorted().toList();
-        HashSet<String> TestsortSet = new HashSet<>(Arraysort);
-        HashSet<String> OrignalSet = new HashSet<>(lst);
-        return TestsortSet.containsAll(OrignalSet);
-    }
-
-    public static void main(String[] args) {
-
-        List<String> memberNames = new ArrayList<>();
-        memberNames.add("a1");
-        memberNames.add("a3");
-        memberNames.add("a2");
-        //List <String> b = arraySortedOrNot(memberNames);
-        boolean b = arraySortedOrNot(memberNames);
-        System.out.println(b);
-
-    }
-
-    /*
     @Test
-
     public void SortChecker() {
-        Assertions.assertEquals(true,arraySortedOrNot(lstSorter()));
+        String [] testLst = {"C3","C2","C1"};
+        Assertions.assertEquals(Arrays.stream(testLst).toList(),lstSorter());
     }
 
-    */
+
 
 
 
