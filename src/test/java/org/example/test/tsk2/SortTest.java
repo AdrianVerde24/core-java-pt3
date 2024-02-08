@@ -17,15 +17,10 @@ import static org.example.task.tsk2.Sort.lstSorter;
 
 
 public class SortTest {
-
     @Test
     public void SortChecker() {
         String [] testLst = {"C3","C2","C1"};
         Assertions.assertEquals(Arrays.stream(testLst).toList(),lstSorter());
     }
-
-
-
-
 
 }
